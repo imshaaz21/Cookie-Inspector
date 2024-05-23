@@ -6,9 +6,16 @@ function App() {
   const [cookies, setCookies] = useState([]);
 
   useEffect(() => {
-    chrome.cookies.getAll({}, (cookies) => {
-      setCookies(cookies);
-      console.log("Cookies:", cookies);
+    // Get all cookie stores
+    chrome.cookies.getAllCookieStores((cookieStores) => {
+      // Iterate through each cookie store
+      cookieStores.forEach((cookieStore) => {
+        // Retrieve cookies from the current cookie store
+        chrome.cookies.getAll({ storeId: cookieStore.id }, (cookies) => {
+          // Merge the cookies into the state
+          setCookies((prevCookies) => [...prevCookies, ...cookies]);
+        });
+      });
     });
   }, []);
 

@@ -3,5 +3,5 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.cookies.onChanged.addListener((changeInfo) => {
-  console.log("Cookie changed:", changeInfo);
+  // console.log("Cookie changed:", changeInfo);
 });
