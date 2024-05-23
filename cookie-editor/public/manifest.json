@@ -3,6 +3,7 @@
   "name": "Cookie Editor",
   "version": "1.0",
   "author": "imshaaz21",
+  "offline_enabled": true,
   "description": "A Chrome extension to edit cookies.",
   "permissions": ["cookies", "tabs", "storage"],
   "background": {
@@ -17,6 +18,7 @@
       "128": "icon128.png"
     }
   },
+  "optional_host_permissions": ["*://*"],
   "icons": {
     "16": "icon16.png",
     "32": "icon32.png",

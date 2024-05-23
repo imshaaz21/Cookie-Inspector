@@ -7,19 +7,17 @@ function App() {
 
   useEffect(() => {
     // Get all cookie stores
-    chrome.cookies.getAllCookieStores((cookieStores) => {
-      // Iterate through each cookie store
-      cookieStores.forEach((cookieStore) => {
-        // Retrieve cookies from the current cookie store
-        chrome.cookies.getAll({ storeId: cookieStore.id }, (cookies) => {
-          // Merge the cookies into the state
-          setCookies((prevCookies) => [...prevCookies, ...cookies]);
-        });
+    chrome.runtime
+      .sendMessage({ action: "getCookies", domain: document.domain })
+      .then((response) => {
+        if (response.success) {
+          // Construct the cookie header string
+          console.log("Cookies:", response);
+        } else {
+          console.log("Error: " + response.error);
+        }
       });
-    });
   }, []);
-
-  console.log("Cookies:");
 
   return (
     <div className="App">

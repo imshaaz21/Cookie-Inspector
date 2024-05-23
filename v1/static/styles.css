@@ -1,0 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+#cookie-list {
+  margin-top: 10px;
+}
+
+#cookie-list div {
+  margin-bottom: 5px;
+}
