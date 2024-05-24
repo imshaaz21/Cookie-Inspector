@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Cookie Viewer",
+  "name": "Cookie Inspector",
   "version": "1.0",
-  "description": "View and manage cookies",
+  "description": "A tool to view, edit, and manage cookies stored in your browser for better control and privacy.",
   "permissions": ["cookies", "activeTab", "storage"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "action": {
