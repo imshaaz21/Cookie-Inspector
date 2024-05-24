@@ -1,15 +1,69 @@
+html {
+  width: 500px;
+  height: auto;
+}
+
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-h1 {
-  font-size: 18px;
+.cookie-list {
+  padding: 15px 0; /* Adjust padding as needed */
 }
 
-#cookie-list {
+.cookie-list .cookie-item {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cookie-list .cookie-item:hover {
+  background-color: #f1f1f1;
+}
+
+.cookie-list .cookie-item:last-child {
+  border-bottom: none;
+}
+
+.cookie-list .cookie-key {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.cookie-list .cookie-value {
+  display: none;
   margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  word-break: break-all;
+  padding: 10px;
+  background-color: #f9f9f9;
+  /* border-radius: 5px; */
 }
 
-#cookie-list div {
-  margin-bottom: 5px;
+.cookie-list .cookie-item.active .cookie-value {
+  display: block;
+}
+
+.cookie-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cookie-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.cookie-list::-webkit-scrollbar-thumb {
+  background-color: #835804;
+  border-radius: 3px;
+  height: 5px;
+  width: 5px;
+}
+
+.cookie-list::-webkit-scrollbar-thumb:hover {
+  background-color: #eea719;
 }
