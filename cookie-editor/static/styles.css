@@ -1,5 +1,5 @@
 html {
-  width: 500px;
+  width: 400px;
   height: auto;
 }
 
@@ -8,10 +8,12 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: #1b262c;
 }
 
 .cookie-list {
-  padding: 15px 0; /* Adjust padding as needed */
+  padding: 0px 0; /* Adjust padding as needed */
+  background-color: #1b262c;
 }
 
 .cookie-list .cookie-item {
@@ -21,8 +23,8 @@ body {
   transition: background-color 0.3s;
 }
 
-.cookie-list .cookie-item:hover {
-  background-color: #f1f1f1;
+.cookie-item:hover {
+  background-color: #323232;
 }
 
 .cookie-list .cookie-item:last-child {
