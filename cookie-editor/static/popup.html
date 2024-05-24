@@ -1,13 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Cookie Viewer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookie Inspector</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
-  <body>
-    <h1>Cookie Viewer</h1>
-    <button id="view-cookies">View Cookies</button>
-    <div id="cookie-list"></div>
+  <body class="bg-gray-100 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full">
+      <h1 class="text-2xl font-bold mb-4 text-blue-600">Cookie Inspector🔎</h1>
+      <div
+        id="cookie-list"
+        class="cookie-list overflow-y-auto"
+        style="max-height: 400px"
+      ></div>
+    </div>
     <script src="popup.bundle.js"></script>
   </body>
 </html>
