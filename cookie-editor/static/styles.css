@@ -8,12 +8,12 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: #1b262c;
+  background-color: #1d1919;
 }
 
 .cookie-list {
-  padding: 0px 0; /* Adjust padding as needed */
-  background-color: #1b262c;
+  padding: 0px 0;
+  background-color: #1d1919;
 }
 
 .cookie-list .cookie-item {
@@ -24,7 +24,7 @@ body {
 }
 
 .cookie-item:hover {
-  background-color: #323232;
+  background-color: #2b2b28;
 }
 
 .cookie-list .cookie-item:last-child {
@@ -33,7 +33,7 @@ body {
 
 .cookie-list .cookie-key {
   font-weight: bold;
-  color: #007bff;
+  color: #f8f8f8;
 }
 
 .cookie-list .cookie-value {
@@ -43,8 +43,19 @@ body {
   color: #555;
   word-break: break-all;
   padding: 10px;
-  background-color: #f9f9f9;
-  /* border-radius: 5px; */
+  background-color: #f8f8f8;
+}
+
+.no-cookies {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin: 10px;
+}
+
+#cookie-count {
+  font-size: 11px;
+  color: #555;
 }
 
 .cookie-list .cookie-item.active .cookie-value {
@@ -60,12 +71,16 @@ body {
 }
 
 .cookie-list::-webkit-scrollbar-thumb {
-  background-color: #835804;
+  background-color: #e3b04b;
   border-radius: 3px;
   height: 5px;
   width: 5px;
 }
 
 .cookie-list::-webkit-scrollbar-thumb:hover {
-  background-color: #eea719;
+  background-color: #f1d6ab;
+}
+
+.hidden {
+  display: none;
 }
