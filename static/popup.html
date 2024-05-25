@@ -10,20 +10,20 @@
     />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
-  <body class="flex items-center justify-center">
-    <div class="p-6 shadow-lg w-full">
-      <h1 class="text-2xl font-bold mb-4 text-white text-center">
-        Cookie Inspector🔎
-      </h1>
-      <span
-        id="cookie-count"
-        class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded text-center my-4 hidden"
-      ></span>
-      <div
-        id="cookie-list"
-        class="cookie-list overflow-y-auto bg-white p-4 rounded mt-2"
-        style="max-height: 400px"
-      ></div>
+  <body>
+    <img src="assets/banner.png" alt="Cookie Inspector🔎" title="Cookie Inspector🔎" class="w-full"/>
+    <div class="flex items-center justify-center">
+      <div class="p-6 shadow-lg w-full">
+        <span
+          id="cookie-count"
+          class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded text-center my-4 hidden"
+        ></span>
+        <div
+          id="cookie-list"
+          class="cookie-list overflow-y-auto bg-white p-4 rounded mt-2"
+          style="max-height: 400px"
+        ></div>
+      </div>
     </div>
     <script src="popup.bundle.js"></script>
   </body>
