@@ -11,11 +11,17 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body class="flex items-center justify-center">
-    <div class="p-6 rounded-lg shadow-lg w-full">
-      <h1 class="text-2xl font-bold mb-4 text-blue-600 text-center">Cookie Inspector🔎</h1>
+    <div class="p-6 shadow-lg w-full">
+      <h1 class="text-2xl font-bold mb-4 text-white text-center">
+        Cookie Inspector🔎
+      </h1>
+      <span
+        id="cookie-count"
+        class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded text-center my-4 hidden"
+      ></span>
       <div
         id="cookie-list"
-        class="cookie-list overflow-y-auto"
+        class="cookie-list overflow-y-auto bg-white p-4 rounded mt-2"
         style="max-height: 400px"
       ></div>
     </div>
