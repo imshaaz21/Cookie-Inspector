@@ -8,16 +8,35 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
-    <img src="assets/banner.png" alt="Cookie Inspector🔎" title="Cookie Inspector🔎" class="w-full"/>
+    <img
+      src="assets/banner.svg"
+      alt="Cookie Inspector🔎"
+      title="Cookie Inspector🔎"
+      class="w-full banner"
+    />
     <div class="flex items-center justify-center">
       <div class="p-6 shadow-lg w-full">
-        <span
-          id="cookie-count"
-          class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded text-center my-4 hidden"
-        ></span>
+        <div class="pils">
+          <span
+            id="cookie-domain"
+            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-50 text-gray-500 dark:bg-white/10 dark:text-white"
+          ></span>
+          <span
+            id="cookie-count"
+            class="inline-flex items-center gap-x-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-gray-50 text-gray-500 dark:bg-white/10 dark:text-white"
+          >
+          </span>
+        </div>
         <div
           id="cookie-list"
           class="cookie-list overflow-y-auto bg-white p-4 rounded mt-2"
