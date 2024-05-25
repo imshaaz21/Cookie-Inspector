@@ -1,10 +1,10 @@
 html {
-  width: 400px;
+  width: 350px;
   height: auto;
 }
 
 .banner {
-  max-width: 400px;
+  max-width: 350px;
   height: auto;
   /* max-height: 50px; */
 }
@@ -65,7 +65,7 @@ i.fas.fa-trash {
   padding: 10px;
   background-color: #f8f8f8;
 }
-.pils {
+.pils #cookie-count {
   margin-top: 10px;
 }
 .no-cookies {

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cookieCount.classList.add("hidden");
         cookieDomain.classList.add("hidden");
       } else {
-        cookieCount.textContent = `Cookie Count: ${cookies.length}`;
+        cookieCount.textContent = `Cookie count: ${cookies.length}`;
         cookieDomain.textContent = getMainDomain(activeTab.url);
         cookieCount.classList.remove("hidden");
         cookies.forEach((cookie) => {
