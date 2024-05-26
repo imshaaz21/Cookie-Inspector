@@ -1,9 +1,3 @@
-// current time function
-export const currentTime = () => {
-  const date = new Date();
-  return date.toLocaleTimeString();
-};
-
 export const getMainDomain = (url) => {
   const urlObj = new URL(url);
   const hostname = urlObj.hostname;
