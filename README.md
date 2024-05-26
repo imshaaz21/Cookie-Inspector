@@ -12,6 +12,7 @@ Cookie Inspector is a browser extension that allows users to view, edit, and man
 - Edit cookie values.
 - Delete individual cookies.
 - Displays total cookie count.
+- manifest v3
 
 ## 🛠️ Setup and Development
 
