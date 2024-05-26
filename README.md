@@ -94,6 +94,9 @@ Use `Tailwind CSS` for styling and `Font Awesome` for icons.
 ## 🗑️ Deleting Cookies
 1. Click on the `trash icon` next to the cookie you want to delete.
 
+## 🔄 Future Plans
+The main branch contains the Chrome extension. In the future, support for other browsers (like Firefox etc.) will be added.
+
 ## 📜 License
 
 This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for details.
