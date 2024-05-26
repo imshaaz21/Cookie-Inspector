@@ -3,7 +3,7 @@
 Cookie Inspector is a browser extension that allows users to view, edit, and manage cookies stored in their browser. This extension provides a user-friendly interface to handle cookies for better control and privacy.
 
 <div align="center">
-  <img src="static/assets/screenshot-1.png" alt="screenshot-1" width="50%" />
+  <img src="static/assets/screenshot-1.png" alt="screenshot-1" width="auto" height="300px"/>
 </div>
 
 ## 🚀 Features
