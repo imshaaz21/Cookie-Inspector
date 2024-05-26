@@ -95,7 +95,7 @@ Use `Tailwind CSS` for styling and `Font Awesome` for icons.
 1. Click on the `trash icon` next to the cookie you want to delete.
 
 ## 🔄 Future Plans
-The main branch contains the Chrome extension. In the future, support for other browsers (like Firefox etc.) will be added.
+**The main branch contains the Chrome extension**. In the future, support for other browsers (like Firefox etc.) will be added.
 
 ## 📜 License
 
