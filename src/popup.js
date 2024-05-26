@@ -1,4 +1,5 @@
 import { getMainDomain } from "./utils";
+import { createCookieItem } from "./dom";
 
 document.addEventListener("DOMContentLoaded", () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -14,54 +15,18 @@ document.addEventListener("DOMContentLoaded", () => {
         cookieCount.classList.add("hidden");
         cookieDomain.classList.add("hidden");
       } else {
-        cookieCount.textContent = `Cookie count: ${cookies.length}`;
+        cookieCount.textContent = `Cookie Count: ${cookies.length}`;
         cookieDomain.textContent = getMainDomain(activeTab.url);
         cookieCount.classList.remove("hidden");
+        cookieDomain.classList.remove("hidden");
         cookies.forEach((cookie) => {
-          const listItem = document.createElement("div");
-          listItem.classList.add("cookie-item");
-          listItem.innerHTML = `
-            <div class="flex items-center justify-between w-full">
-              <div class="cookie-key break-all">${cookie.name}</div>
-              <button class="bg-none border-none cursor-pointer trash-button">
-                <i class="fas fa-trash"></i>
-              </button>
-            </div>
-            <div class="cookie-value">${cookie.value}</div>
-          `;
-
-          listItem.addEventListener("click", () => {
-            listItem.classList.toggle("active");
-          });
-
-          const trashButton = listItem.querySelector(".trash-button");
-          trashButton.addEventListener("click", (event) => {
-            event.stopPropagation();
-            chrome.cookies.remove(
-              {
-                url: activeTab.url,
-                name: cookie.name,
-              },
-              (details) => {
-                if (details) {
-                  console.log(`Deleted cookie: ${cookie.name}`);
-                  listItem.remove();
-                  const remainingCookies =
-                    cookieList.querySelectorAll(".cookie-item").length;
-                  if (remainingCookies === 0) {
-                    cookieList.innerHTML =
-                      '<div class="no-cookies">No cookies found</div>';
-                    cookieCount.classList.add("hidden");
-                  } else {
-                    cookieCount.textContent = `Total Cookies: ${remainingCookies}`;
-                  }
-                } else {
-                  console.error(`Failed to delete cookie: ${cookie.name}`);
-                }
-              }
-            );
-          });
-
+          const listItem = createCookieItem(
+            cookie,
+            activeTab.url,
+            cookieList,
+            cookieCount,
+            cookieDomain
+          );
           cookieList.appendChild(listItem);
         });
       }
